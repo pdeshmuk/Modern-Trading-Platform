@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-aop:2.5.3'
 
 	//Test Dependencies	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
