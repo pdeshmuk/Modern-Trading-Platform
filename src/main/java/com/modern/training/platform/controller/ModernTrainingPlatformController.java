@@ -10,12 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.modern.training.platform.service.watchlist.WatchlistService;
 
+import io.micrometer.core.annotation.Timed;
+
 @RestController
 public class ModernTrainingPlatformController {
 
 	@Autowired
 	WatchlistService watchlistService;
 
+	@Timed
 	@GetMapping("/company-profile/{ticker}")
 	@ResponseBody
 	public ResponseEntity<String> getCompanyProfile(@PathVariable String ticker) {
