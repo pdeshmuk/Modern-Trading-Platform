@@ -14,7 +14,9 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-aop:2.5.3'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	//Adding Swagger3
+	implementation("org.springdoc:springdoc-openapi-ui:1.4.6")
 
 	//Test Dependencies	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
