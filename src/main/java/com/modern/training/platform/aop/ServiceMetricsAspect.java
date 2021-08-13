@@ -1,38 +1,42 @@
 package com.modern.training.platform.aop;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StopWatch;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
-
+import lombok.RequiredArgsConstructor;
 
 @Aspect
 @Component
+@RequiredArgsConstructor
 public class ServiceMetricsAspect {
 	
-	@Autowired 
-	private MeterRegistry mr;
-	
+	private final MeterRegistry meterRegistry;
 	
     @Around("execution(public * com.modern.training.platform.service..*(..))")
     public Object doServiceTimers(ProceedingJoinPoint pjp) throws Throwable {
 
-    	long t0 = System.currentTimeMillis();
-    	Object retVal = pjp.proceed();
-    	long t1 = System.currentTimeMillis();
+    	StopWatch sw = new StopWatch();
+    	sw.start();
+    	Object result = pjp.proceed();
+    	sw.stop();
 
     	String timerName = pjp.getSignature().getDeclaringType().getName() + '.' + pjp.getSignature().getName() + ".timer";
-    	Timer timer = mr.timer(timerName);
-    	timer.record(t1-t0, TimeUnit.MILLISECONDS);
+    	timerName = timerName.replace("com.modern.training.platform", "c.m.t.p");
+    	
+    	Timer timer = meterRegistry.timer(timerName);
+    	timer.record(Duration.ofMillis(sw.getTotalTimeMillis()));
         
-        return retVal;
+        return result;
     }
+    
+    
 }
 
 

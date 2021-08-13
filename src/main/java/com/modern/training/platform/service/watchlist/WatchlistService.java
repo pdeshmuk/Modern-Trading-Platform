@@ -1,7 +1,9 @@
 package com.modern.training.platform.service.watchlist;
 
+import com.modern.training.platform.model.SymbolProfile;
+
 public interface WatchlistService {
 
-	String getSymbolProfile(String symbol);
+	public SymbolProfile getSymbolProfile(String symbol, int days);
 	
 } 
