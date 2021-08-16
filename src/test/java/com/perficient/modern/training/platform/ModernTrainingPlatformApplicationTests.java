@@ -3,7 +3,10 @@ package com.perficient.modern.training.platform;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+import com.modern.training.platform.ModernTrainingPlatformApplication;
+
+
+@SpringBootTest(classes=ModernTrainingPlatformApplication.class)
 class ModernTrainingPlatformApplicationTests {
 
 	@Test

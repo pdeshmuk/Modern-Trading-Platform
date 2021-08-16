@@ -22,6 +22,10 @@ dependencies {
 
 	//Test Dependencies	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	// LocalDate etc.
+	runtimeOnly 'com.fasterxml.jackson.module:jackson-modules-java8'
+
 }
 
 
