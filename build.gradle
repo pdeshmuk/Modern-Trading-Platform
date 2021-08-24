@@ -2,11 +2,13 @@ plugins {
 	id 'org.springframework.boot' version '2.5.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+  	id "io.freefair.lombok" version "6.1.0-m3"
 }
 
 group = 'com.perficient'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
 
 repositories {
 	mavenCentral()
@@ -15,15 +17,20 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
+
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	
 	//Adding Swagger3
 	implementation("org.springdoc:springdoc-openapi-ui:1.4.6")
 	implementation("org.springdoc:springdoc-openapi-security:1.5.9")
 
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+
 	//Test Dependencies	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
 
 test {
 	useJUnitPlatform()
