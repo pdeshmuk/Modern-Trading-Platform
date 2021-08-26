@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -24,7 +25,7 @@ public class Swagger3 {
           .version(appVersion)
           .description(appDesciption)
           .termsOfService("http://swagger.io/terms/")
-          .license(new License().name("Apache 2.0").url("http://springdoc.org")));
+          .license(new License().name("v1").url("http://springdoc.org")));
     }
 	
 
@@ -34,6 +35,7 @@ public class Swagger3 {
 		scheme.setScheme("basic");
 		scheme.setName("basicAuth");
 		scheme.setType(SecurityScheme.Type.HTTP);
+		scheme.setIn(SecurityScheme.In.HEADER);
 		return scheme;
 	}
 	

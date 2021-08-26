@@ -17,15 +17,14 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
 
 	implementation 'org.springframework.boot:spring-boot-starter-security'
-	
+		
 	//Adding Swagger3
 	implementation("org.springdoc:springdoc-openapi-ui:1.4.6")
-	implementation("org.springdoc:springdoc-openapi-security:1.5.9")
 
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'io.micrometer:micrometer-registry-prometheus'
 
 	//Test Dependencies	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
