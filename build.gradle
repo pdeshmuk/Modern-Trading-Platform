@@ -22,6 +22,11 @@ dependencies {
 
 	//Test Dependencies	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	// LocalDate etc.
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-modules-java8
+	runtimeOnly group: 'com.fasterxml.jackson.module', name: 'jackson-modules-java8', version: '2.12.4', ext: 'pom'
+
 }
 
 
