@@ -39,7 +39,7 @@ engine:
     chain:
     - type: ReplaceText
       substitutions:
-      - text: tanzu-java-web-app
+      - text: modern-trading-platform
         with: "#artifactId"
     - type: RewritePath
       rewriteTo: "#filename"

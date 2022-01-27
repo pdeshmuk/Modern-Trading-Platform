@@ -1,4 +1,4 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='gcr.io/pdeshmuk/modern-trading-platform-source')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='your-registry.io/project/modern-trading-platform-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='default')
 
