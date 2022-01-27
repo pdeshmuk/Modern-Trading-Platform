@@ -1,7 +1,7 @@
 accelerator:
   displayName: Modern Trading Platform
   description: A sample trading platfrom using REST services built with Tanzu supply-chain
-  iconUrl: https://github.com/sample-accelerators/icons/raw/master/icon-boot.png
+  iconUrl: https://github.com/pdeshmuk/Modern-Trading-Platform/blob/main/icon-trading.jpeg
   tags:
   - java
   - spring
