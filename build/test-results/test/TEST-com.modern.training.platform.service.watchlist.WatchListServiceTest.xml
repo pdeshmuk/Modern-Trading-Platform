@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.modern.training.platform.service.watchlist.WatchListServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-27T14:54:26" hostname="dprabodh-a01.vmware.com" time="0.0">
+  <properties/>
+  <testcase name="testGetSymbolProfile()" classname="com.modern.training.platform.service.watchlist.WatchListServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

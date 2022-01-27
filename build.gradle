@@ -5,7 +5,7 @@ plugins {
   	id "io.freefair.lombok" version "6.1.0-m3"
 }
 
-group = 'com.perficient'
+group = 'com.modern'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
