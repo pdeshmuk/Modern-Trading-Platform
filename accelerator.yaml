@@ -1,6 +1,6 @@
 accelerator:
   displayName: Modern Trading Platform
-  description: A sample trading platfrom using REST services built with Tanzu supply-chain
+  description: A sample trading platform using REST services built with Tanzu supply-chain
   iconUrl: https://github.com/pdeshmuk/Modern-Trading-Platform/raw/main/trading-icon.png
   tags:
   - java
