@@ -18,8 +18,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'io.micrometer:micrometer-registry-prometheus'
 
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.5'
+	implementation 'org.springdoc:springdoc-openapi-webmvc-core:1.6.5'
+	
 	//Test Dependencies	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
